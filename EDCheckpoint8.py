@@ -3,18 +3,18 @@ import numpy as np
 # Parámetros
 T_amb = 27
 T0 = 30
-k = 0.405465
+k = -0.405465
 h = 0.2
 t_final = 1.0
 
 # Derivada para método de Euler
 def f(T, t):
-    return -k * (T - T_amb)
+    return k * (T - T_amb)
 
 # Solución analítica por separación de variables:
-# T(t) = T_amb + (T0 - T_amb) * e^(-kt)
+# T(t) = T_amb + (T0 - T_amb) * e^(kt)
 def T_exacta(t):
-    return T_amb + 3 * np.exp(-k * t)
+    return T_amb + 3 * np.exp(k * t)
 
 # Método de Euler
 t_valores = np.arange(0, t_final + h, h)
