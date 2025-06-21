@@ -8,16 +8,17 @@ Este proyecto implementa los métodos de euler y separación de variables para r
 
 Utilizando estos datos, se modela la temperatura del cuerpo con la ley de enfriamiento de Newton, descrita por la ecuación diferencial:
 
-\[
+$$
 \frac{dT}{dt} = -k(T - T_{\text{amb}})
-\]
+$$
+
 
 Donde:
 
-- \( T(t) \): Temperatura del cuerpo en el tiempo \( t \)
-- \( T_{\text{amb}} = 27^\circ \)C: Temperatura ambiente
-- \( k \): Constante de enfriamiento
-- \( T(0) = 30^\circ \)C: Temperatura al llegar el forense
+- T(t): Temperatura del cuerpo en el tiempo t
+- T_amb = 27°C: Temperatura ambiente
+- k: Constante de enfriamiento
+- T(0) = 30°C: Temperatura al llegar el forense
 
 ## Objetivos
 
@@ -58,15 +59,16 @@ Esto imprimirá una tabla comparativa entre el método numérico (Euler) y el m�
 ## Métodos utilizados
 
 - **Solución analítica**: Derivada por separación de variables, fórmula exacta:
-  \[
-  T(t) = T_{\text{amb}} + (T_0 - T_{\text{amb}})e^{kt}
-  \]
+  $$
+  T(t) = T_{\text{amb}} + (T_0 - T_{\text{amb}})e^{-kt}
+  $$
+
 
 - **Método de Euler**: Método numérico paso a paso para aproximar soluciones diferenciales.
 
 ## Constante de enfriamiento
 
-La constante \( k \approx -0.405465 \) fue determinada usando los datos de temperatura a los 0 y 1 horas, resolviendo la ecuación de Newton hacia atrás.
+La constante k ≈ -0.405465 fue determinada usando los datos de temperatura a los 0 y 1 horas, resolviendo la ecuación de Newton hacia atrás.
 
 ## Solución exacta del problema
 
