@@ -20,9 +20,9 @@ def T_exacta(t):
 t_valores = np.arange(0, t_final + h, h)
 T_euler = [T0]
 for i in range(1, len(t_valores)):
-    T_prev = T_euler[-1]
-    T_next = T_prev + h * f(T_prev, t_valores[i-1])
-    T_euler.append(T_next)
+    T_anterior = T_euler[-1]
+    T_nueva = T_anterior + h * f(T_anterior, t_valores[i-1])
+    T_euler.append(T_nueva)
 
 # Solución exacta
 T_exacto = [T_exacta(t) for t in t_valores]
