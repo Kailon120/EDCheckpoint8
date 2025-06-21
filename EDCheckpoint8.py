@@ -12,7 +12,7 @@ def f(T, t):
     return k * (T - T_amb)
 
 # Solución analítica por separación de variables:
-# T(t) = T_amb + (T0 - T_amb) * e^(kt)
+# T(t) = T_amb + 3 * e^(kt)
 def T_exacta(t):
     return T_amb + 3 * np.exp(k * t)
 
