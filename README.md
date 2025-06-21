@@ -58,10 +58,9 @@ Esto imprimirá una tabla comparativa entre el método numérico (Euler) y el m�
 
 ## Métodos utilizados
 
-- **Solución analítica**: Derivada por separación de variables, fórmula exacta:
-  $$
-  T(t) = T_{\text{amb}} + (T_0 - T_{\text{amb}})e^{-kt}
-  $$
+- **SSolución analítica**: Derivada por separación de variables, fórmula exacta:  
+T(t) = T_amb + (T₀ - T_amb) * exp(-k * t)
+
 
 
 - **Método de Euler**: Método numérico paso a paso para aproximar soluciones diferenciales.
